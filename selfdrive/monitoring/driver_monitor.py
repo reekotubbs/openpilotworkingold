@@ -58,7 +58,7 @@ class DRIVER_MONITOR_SETTINGS():
     self._RECOVERY_FACTOR_MIN = 1.25  # relative to minus step change
 
     self._MAX_TERMINAL_ALERTS = 99  # not allowed to engage after 3 terminal alerts
-    self._MAX_TERMINAL_DURATION = int(2 / self._DT_DMON)  # not allowed to engage after 30s of terminal alerts
+    self._MAX_TERMINAL_DURATION = int(2700 / self._DT_DMON)  # not allowed to engage after 30s of terminal alerts
 
 
 # model output refers to center of cropped image, so need to apply the x displacement offset
