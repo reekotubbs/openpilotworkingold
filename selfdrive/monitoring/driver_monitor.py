@@ -18,12 +18,12 @@ EventName = car.CarEvent.EventName
 class DRIVER_MONITOR_SETTINGS():
   def __init__(self, TICI=TICI, DT_DMON=DT_DMON):
     self._DT_DMON = DT_DMON
-    self._AWARENESS_TIME = 35. # passive wheeltouch total timeout
-    self._AWARENESS_PRE_TIME_TILL_TERMINAL = 12.
-    self._AWARENESS_PROMPT_TIME_TILL_TERMINAL = 6.
-    self._DISTRACTED_TIME = 11. # active monitoring total timeout
-    self._DISTRACTED_PRE_TIME_TILL_TERMINAL = 8.
-    self._DISTRACTED_PROMPT_TIME_TILL_TERMINAL = 6.
+    self._AWARENESS_TIME = 2700. # passive wheeltouch total timeout
+    self._AWARENESS_PRE_TIME_TILL_TERMINAL = 2700.
+    self._AWARENESS_PROMPT_TIME_TILL_TERMINAL = 2700.
+    self._DISTRACTED_TIME = 2700. # active monitoring total timeout
+    self._DISTRACTED_PRE_TIME_TILL_TERMINAL = 2700.
+    self._DISTRACTED_PROMPT_TIME_TILL_TERMINAL = 2700.
 
     self._FACE_THRESHOLD = 0.5
     self._PARTIAL_FACE_THRESHOLD = 0.765 if TICI else 0.43
@@ -47,7 +47,7 @@ class DRIVER_MONITOR_SETTINGS():
     self._YAW_MIN_OFFSET = -0.0246
 
     self._POSESTD_THRESHOLD = 0.38 if TICI else 0.3
-    self._HI_STD_FALLBACK_TIME = int(10  / self._DT_DMON)  # fall back to wheel touch if model is uncertain for 10s
+    self._HI_STD_FALLBACK_TIME = int(2700  / self._DT_DMON)  # fall back to wheel touch if model is uncertain for 10s
     self._DISTRACTED_FILTER_TS = 0.25  # 0.6Hz
 
     self._POSE_CALIB_MIN_SPEED = 13  # 30 mph
@@ -57,8 +57,8 @@ class DRIVER_MONITOR_SETTINGS():
     self._RECOVERY_FACTOR_MAX = 5.  # relative to minus step change
     self._RECOVERY_FACTOR_MIN = 1.25  # relative to minus step change
 
-    self._MAX_TERMINAL_ALERTS = 3  # not allowed to engage after 3 terminal alerts
-    self._MAX_TERMINAL_DURATION = int(30 / self._DT_DMON)  # not allowed to engage after 30s of terminal alerts
+    self._MAX_TERMINAL_ALERTS = 99  # not allowed to engage after 3 terminal alerts
+    self._MAX_TERMINAL_DURATION = int(2 / self._DT_DMON)  # not allowed to engage after 30s of terminal alerts
 
 
 # model output refers to center of cropped image, so need to apply the x displacement offset
