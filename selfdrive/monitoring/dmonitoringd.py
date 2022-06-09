@@ -28,7 +28,7 @@ def dmonitoringd_thread(sm=None, pm=None):
   sm['carState'].standstill = True
 
   v_cruise_last = 0
-  driver_engaged = False
+  driver_engaged = True
 
   # 10Hz <- dmonitoringmodeld
   while True:
@@ -54,9 +54,9 @@ def dmonitoringd_thread(sm=None, pm=None):
     driver_status.get_pose(sm['driverState'], sm['liveCalibration'].rpyCalib, sm['carState'].vEgo, sm['controlsState'].enabled)
 
     # Block engaging after max number of distrations
-    if driver_status.terminal_alert_cnt >= driver_status.settings._MAX_TERMINAL_ALERTS or \
-       driver_status.terminal_time >= driver_status.settings._MAX_TERMINAL_DURATION:
-      events.add(car.CarEvent.EventName.tooDistracted)
+    #if driver_status.terminal_alert_cnt >= driver_status.settings._MAX_TERMINAL_ALERTS or \
+    #   driver_status.terminal_time >= driver_status.settings._MAX_TERMINAL_DURATION:
+    #  events.add(car.CarEvent.EventName.tooDistracted)
 
     # Update events from driver state
     driver_status.update(events, driver_engaged, sm['controlsState'].enabled, sm['carState'].standstill)
