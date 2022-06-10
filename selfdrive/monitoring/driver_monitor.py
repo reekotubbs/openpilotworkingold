@@ -269,14 +269,7 @@ class DriverStatus():
         self.awareness = max(self.awareness - self.step_change, -0.1)
 
     alert = None
-    if self.awareness <= 0.:
-      # terminal red alert: disengagement required
-      
-      if awareness_prev > 0.:
-        elif self.awareness <= self.threshold_prompt:
-      # prompt orange alert
-        elif self.awareness <= self.threshold_pre:
-      # pre green alert
+    
 
     if alert is not None:
       events.add(alert)
