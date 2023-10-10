@@ -47,7 +47,7 @@ sudo apt install -y python3.9 python3.9-dev python3.9-distutils python3-pip scon
 
 # get flowpilot
 cd ~/ && [ ! -d 'flowpilot' ] && git clone https://github.com/reekotubbs/flowpilot.git || true
-cd ~/flowpilot && git checkout -m opgm-devXfp && git submodule update --init
+cd flowpilot && git checkout -m opgm-devXfp && git submodule update --init
 
 pip install pipenv numpy pycryptodome
 
