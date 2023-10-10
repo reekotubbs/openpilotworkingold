@@ -46,8 +46,8 @@ yes | sudo add-apt-repository ppa:deadsnakes/ppa
 sudo apt install -y python3.9 python3.9-dev python3.9-distutils python3-pip scons
 
 # get flowpilot
-cd ~/ && git clone https://github.com/flowdriveai/flowpilot.git
-cd flowpilot && git submodule update --init
+cd ~/ && [ ! -d 'flowpilot' ] && git clone https://github.com/reekotubbs/flowpilot.git || true
+cd ~/flowpilot && git checkout -m opgm-devXfp && git submodule update --init
 
 pip install pipenv numpy pycryptodome
 
