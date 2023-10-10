@@ -10,7 +10,6 @@
 [submodule "cereal"]
 	path = cereal
 	url = https://github.com/reekotubbs/cereal.git
-	branch = opgm-dev
 [submodule "rednose_repo"]
 	path = rednose_repo
 	url = https://github.com/reekotubbs/rednose.git
