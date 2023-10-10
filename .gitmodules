@@ -1,16 +1,16 @@
 [submodule "panda"]
 	path = panda
-	url = ../../reekotubbs/panda.git
+	url = https://github.com/reekotubbs/panda.git
 [submodule "opendbc"]
 	path = opendbc
-	url = ../../reekotubbs/opendbc.git
+	url = https://github.com/reekotubbs/opendbc.git
 [submodule "laika_repo"]
 	path = laika_repo
-	url = ../../reekotubbs/laika.git
+	url = https://github.com/reekotubbs/laika.git
 [submodule "cereal"]
 	path = cereal
-	url = ../../reekotubbs/cereal.git
+	url = https://github.com/reekotubbs/cereal.git
 	branch = opgm-dev
 [submodule "rednose_repo"]
 	path = rednose_repo
-	url = ../../reekotubbs/rednose.git
+	url = https://github.com/reekotubbs/rednose.git
